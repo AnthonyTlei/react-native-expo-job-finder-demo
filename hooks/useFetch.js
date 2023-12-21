@@ -22,9 +22,9 @@ const useFetch = (endpoint, query) => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      // const response = await axios.request(options);
-      // setData(response.data.data);
-      setData(popularJobs);
+      const response = await axios.request(options);
+      setData(response.data.data);
+      // setData(popularJobs);
 
       setIsLoading(false);
     } catch (error) {
