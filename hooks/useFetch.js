@@ -22,15 +22,13 @@ const useFetch = (endpoint, query) => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      // console.log(options);
       // const response = await axios.request(options);
-      // setData(response.data.results);
+      // setData(response.data.data);
       setData(popularJobs);
 
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      console.log("Error fetching data: ", error);
       setIsLoading(false);
     } finally {
       setIsLoading(false);
